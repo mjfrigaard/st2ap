@@ -13,12 +13,13 @@ mod_select_vars_ui <- function(id) {
   shiny::selectInput(
     ns("fun"),
     label = "Filter by",
-    choices = c('Numeric' = "is.numeric",
-                'Character' = "is.character",
-                'Factor' = "is.factor",
-                'Logical' = "is.logical",
-                'List' = "is.list"),
-    selected = c('Numeric' = "is.numeric")),
+    choices = c('Numeric' = "numerics",
+                'Character' = "characters",
+                'Factor' = "factors",
+                'Date' = "dates",
+                'Logical' = "logicals",
+                'List' = "lists"),
+    selected = c('Numeric' = "numerics")),
   shiny::selectizeInput(
     ns("vars"),
     label = "Select variables",
@@ -57,9 +58,9 @@ mod_select_vars_server <- function(id, pkg_data) {
             ignoreNULL = TRUE)
 
       shiny::observe({
-        filtered <- pull_type_cols(
+        filtered <- pull_col_types(
                               data = pkg_ds(),
-                              filter =  input$fun)
+                              type =  input$fun)
          shiny::updateSelectizeInput(session,
             inputId = "vars",
             choices = filtered,
@@ -73,8 +74,6 @@ mod_select_vars_server <- function(id, pkg_data) {
               pkg_ds()[input$vars]
             }) |>
           shiny::bindEvent(input$vars, input$fun)
-
-
 
     })
 

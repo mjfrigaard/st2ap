@@ -14,7 +14,7 @@ appUI <- function() {
           ),
         shiny::mainPanel(
           shiny::h3(
-            shiny::code("dataStrApp()")),
+            shiny::code("strApp()")),
           shiny::fluidRow(
             shiny::column(width = 12,
               mod_pkg_data_str_ui("str"))

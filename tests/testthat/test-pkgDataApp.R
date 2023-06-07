@@ -1,1 +1,1 @@
-shiny::testServer(app = dataStrApp(), expr = browser())
+shiny::testServer(app = strApp(), expr = browser())

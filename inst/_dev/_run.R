@@ -92,13 +92,13 @@ testthat::test_file("tests/testthat/test-shinytest2-confirm-plot-labels.R")
 #   y = expected_labels)
 
 
-# run test-dataStrApp.R -------------------------------------------------
+# run test-strApp.R -------------------------------------------------
 # from: https://rstudio.github.io/shinytest2/articles/use-package.html#application-objects-created-by-functions
-testthat::test_file("tests/testthat/test-dataStrApp.R")
+testthat::test_file("tests/testthat/test-strApp.R")
 
 # create test-scatterplot-mappings.R -----------------------------------------
 ## in console ------
-# shiny_app <- tsap::dataStrApp()
+# shiny_app <- tsap::strApp()
 # app <- AppDriver$new(shiny_app, height = 596, width = 1156)
 # put all values in list
 # all_values <- app$get_values()

@@ -3,13 +3,13 @@
 #' @description
 #' Stand-alone app function for debugging app.
 #'
-#' @export dataStrApp
+#' @export strApp
 #'
 #' @importFrom lobstr tree
 #' @importFrom shiny fluidPage sidebarLayout reactiveValuesToList
 #' @importFrom shiny sidebarPanel shinyApp h3 code
 #' @importFrom shiny mainPanel verbatimTextOutput renderPrint
-dataStrApp <- function() {
+strApp <- function() {
   require(tidyr)
   require(dplyr)
   require(forcats)

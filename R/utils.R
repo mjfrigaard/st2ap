@@ -9,6 +9,21 @@
   match(x, table, nomatch = 0) == 0
 }
 
+#' Create a comma-separated list from a vector
+#'
+#' @param x vector
+#'
+#' @return comma, separated, & list
+#' @export vec_to_csl
+#'
+#' @examples
+#' vec_to_csl(x = mtcars$disp)
+vec_to_csl <- function(x) {
+  all_chrs <- as.character(unique(x))
+  comma_chrs <- paste0(all_chrs[1:length(all_chrs) - 1], collapse = ", ")
+  lst_chrs <- paste0(comma_chrs, " & ", all_chrs[length(all_chrs)])
+  return(lst_chrs)
+}
 
 #' Custom `skimr::skim()` for numeric variables
 #'
