@@ -1,0 +1,13 @@
+name: st2ap
+title: st2ap
+username:
+account: mjfrigaard
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8954882
+bundleId: 7139673
+url: https://mjfrigaard.shinyapps.io/st2ap/
+when: 1682533920.31965
+lastSyncTime: 1682533920.31966
+asMultiple: FALSE
+asStatic: FALSE
